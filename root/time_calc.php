@@ -1,3 +1,10 @@
+<!-- 
+
+git merge => http://qiita.com/takanatsu/items/fc89de9bd11148da1438
+
+
+ -->
+
 <?php require "partials/partial_1.php"?>
 <html>
 <head>
