@@ -79,8 +79,20 @@ git merge => http://qiita.com/takanatsu/items/fc89de9bd11148da1438
 				src="images/refresh.png"
 				ONCLICK="page_reload();">
 		
+<!-- 		<a href="http://benfranklin.chips.jp/PHP_server/D-2/url_encode_decode.php">a --- %</a> -->
+		
 		<div><b>Times</b></div>
 		<div id="js"></div>
+		
+		<div style="text-align: right; margin-right: 50px;">
+			
+			<a href="http://benfranklin.chips.jp/PHP_server/D-2/url_encode_decode.php"
+				target="_blank"
+				>
+				encode/decode
+			</a>
+		
+		</div>
 		
 	</div>
 </body>
