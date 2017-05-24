@@ -1,3 +1,13 @@
+<!-- 
+
+http://localhost/WS_Lollipop_server_files/root/VX7GLZ_science-research/color-table.php#table_Green
+
+C:\WORKS_2\WS\WS_Lollipop_server_files\root
+
+/PHP_server
+
+ -->
+
 <html>
 <head>
 	
@@ -37,9 +47,13 @@
 
 <body>
 
+<a href="#table_Red">Red</a>
+<a href="#table_Green">Green</a>
+<a href="#table_Blue">Blue</a>
 
+<hr>
 
-<table>
+<table id='table_Red'>
 
 	<?php 
 	
@@ -70,7 +84,7 @@
 						<?php
 							
 							$val = $i*10 + $j * 5;
-							
+							//ref http://php.net/manual/en/function.dechex.php
 							$hex = ($val <= 16 ? "0".dechex($val) : dechex($val));
 							
 							echo "#".$hex."0000";
@@ -131,6 +145,206 @@
 
 </table>
 
+<table id='table_Green'>
+
+	<?php 
+	
+// 		for ($i = 0; $i < 10; $i++) {
+		$i = 0; $j = 0;
+		$i_max = 22;
+		
+		while ($i < $i_max) {
+		
+			;
+			
+	?>
+			
+		<tr>
+		
+			<?php 
+				
+				while ($j < 10) {
+// 				for ($j = 0; $j < 10; $j++) {
+				
+					;
+				
+			?>
+<!-- 			ref https://www.w3schools.com/tags/att_td_bgcolor.asp -->
+				<td
+					id='<?php echo "cell_$i"."x"."$j"; ?>'
+					bgcolor='
+						<?php
+							
+							$val = $i*10 + $j * 5;
+							//ref http://php.net/manual/en/function.dechex.php
+							$hex = ($val <= 16 ? "0".dechex($val) : dechex($val));
+							
+							echo "#"."00".$hex."00";
+// 							echo "#"."0000".$hex;
+// 							echo "#".$hex."0000";
+// 							echo "#".dechex($i*10 + $j * 5)."0000";
+							
+							?>
+						'
+					>
+<!-- 					bgcolor=' -->
+						<?php 
+								//echo "#ff00ff"; ?>
+<!-- 								' -->
+					
+<!-- 					bgcolor='#ff0000' //=> works. -->
+<!-- 					bgcolor='rgb( -->
+						<?php //echo 0; ?>
+<!-- 								, 0, 0)' -->
+					<!-- bgcolor='rgb(<?php //echo (100 + $i * 10)?>, 0, 0)' -->
+				
+					<font color='
+							<?php 
+							
+								$val2 = 255 - $val;
+								
+								$hex_2 = dechex($val2);
+								
+								echo "#".$hex_2.$hex_2.$hex_2;
+								
+							?>
+							
+							'>
+<!-- 					<font color="#aaaaaa"> -->
+					
+						<?php 
+							
+							echo $val."(".$hex.")"; 
+// 							echo ($i*10 + $j * 5)."(".dechex($i*10 + $j * 5).")"; 
+							
+							?>
+						
+					</font>
+					
+					<?php //echo ($i * 10) + $j; ?>
+					<?php //echo $i * $j; ?>
+					<?php //echo $i * $j; ?>
+				
+				</td>
+			
+			<?php 
+			
+					$j += 1;
+			
+				}//while ($j < 10) {
+// 				}//for ($j = 0; $j < 10; $j++)
+			
+			?>
+		
+		</tr>
+		
+	<?php
+	
+			$j = 0;
+	
+			$i += 1;
+	
+		}//while ($i < 10) {
+// 		}//for ($i = 0; $i < 10; $i++)
+	
+	?>
+
+</table>
+
+
+
+<table id='table_Blue'>
+
+	<?php 
+	
+// 		for ($i = 0; $i < 10; $i++) {
+		$i = 0; $j = 0;
+		$i_max = 22;
+		
+		while ($i < $i_max) {
+		
+			;
+			
+	?>
+			
+		<tr>
+		
+			<?php 
+				
+				while ($j < 10) {
+// 				for ($j = 0; $j < 10; $j++) {
+				
+					;
+				
+			?>
+<!-- 			ref https://www.w3schools.com/tags/att_td_bgcolor.asp -->
+				<td
+					id='<?php echo "cell_$i"."x"."$j"; ?>'
+					bgcolor='
+						<?php
+							
+							$val = $i*10 + $j * 5;
+							//ref http://php.net/manual/en/function.dechex.php
+							$hex = ($val <= 16 ? "0".dechex($val) : dechex($val));
+							
+							echo "#"."0000".$hex;
+// 							echo "#".$hex."0000";
+// 							echo "#".dechex($i*10 + $j * 5)."0000";
+							
+							?>
+						'
+					>
+<!-- 					bgcolor=' -->
+						<?php 
+								//echo "#ff00ff"; ?>
+<!-- 								' -->
+					
+<!-- 					bgcolor='#ff0000' //=> works. -->
+<!-- 					bgcolor='rgb( -->
+						<?php //echo 0; ?>
+<!-- 								, 0, 0)' -->
+					<!-- bgcolor='rgb(<?php //echo (100 + $i * 10)?>, 0, 0)' -->
+				
+					<font color="#aaaaaa">
+					
+						<?php 
+							
+							echo $val."(".$hex.")"; 
+// 							echo ($i*10 + $j * 5)."(".dechex($i*10 + $j * 5).")"; 
+							
+							?>
+						
+					</font>
+					
+					<?php //echo ($i * 10) + $j; ?>
+					<?php //echo $i * $j; ?>
+					<?php //echo $i * $j; ?>
+				
+				</td>
+			
+			<?php 
+			
+					$j += 1;
+			
+				}//while ($j < 10) {
+// 				}//for ($j = 0; $j < 10; $j++)
+			
+			?>
+		
+		</tr>
+		
+	<?php
+	
+			$j = 0;
+	
+			$i += 1;
+	
+		}//while ($i < 10) {
+// 		}//for ($i = 0; $i < 10; $i++)
+	
+	?>
+
+</table>
 
 </body>
 
